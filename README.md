@@ -1,9 +1,3 @@
-Aqui está um **README.md** profissional, completo e estruturado para o seu projeto. Ele cobre desde a instalação até o uso avançado, incluindo as atualizações recentes que fizemos.
-
-Você pode criar um arquivo chamado `README.md` na raiz do seu projeto e colar o conteúdo abaixo.
-
----
-
 # 🎮 Sistema de Quiz Interativo (Passa ou Repassa)
 
 Este é um sistema completo para gerenciamento de jogos de perguntas e respostas ao vivo, estilo "Passa ou Repassa" ou "Jeopardy". O projeto integra uma interface web moderna (React) com hardware externo (ESP32) via comunicação Serial e WebSockets para tempo real.
