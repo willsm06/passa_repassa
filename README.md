@@ -175,6 +175,7 @@ O servidor espera receber strings via Serial (Baud Rate: **115200**) contendo o 
 
 Ideias para melhorar o projeto em versões futuras:
 
+* [ ] **MELHORAR O RESET DO JOGO (APAGANDO OS TIMES E AS PERGUNTAS JA CADASTRADAS).
 * [ ] **Efeitos Sonoros:** Adicionar sons ao acertar, errar e ao declarar o campeão no Telão.
 * [ ] **Cronômetro:** Adicionar um tempo limite para resposta na tela da pergunta.
 * [ ] **Banco de Dados Real:** Migrar de arquivos JSON para SQLite ou MongoDB para histórico de partidas.
