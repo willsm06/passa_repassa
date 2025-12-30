@@ -44,7 +44,7 @@ Para rodar este projeto, você precisa ter instalado no seu computador:
 
 ## 📦 Instalação
 
-O projeto é dividido em duas pastas: a raiz (Frontend) e a pasta `server` (Backend).
+O projeto é dividido em duas pastas: a raiz (Frontend) e a pasta `server` (Backend) [https://github.com/willsm06/sereverPassa_repassa].
 
 ### 1. Configurando o Servidor (Backend)
 
