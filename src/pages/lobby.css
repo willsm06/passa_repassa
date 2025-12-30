@@ -1,0 +1,221 @@
+/* Definição de Cores Globais (Iguais ao Placar) */
+:root {
+  --cbmr-yellow: #FFC72C; /* Amarelo CBMR */
+  --geobrugg-blue: #10335e; /* Azul Geobrugg escuro */
+  --teal-accent: #008C9E; /* Azul Petróleo do mapa */
+  --bg-sand: #fdfbf7;
+  --text-dark: #333;
+}
+
+/* Reset Básico e Scroll */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 100%;
+  overflow-y: auto;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-sand);
+  background-image: linear-gradient(to bottom, #fdfbf7, #ece5d3);
+  color: var(--text-dark);
+}
+
+.container-lobby {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- HEADER (Cópia exata do Placar) --- */
+.header-logos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: white;
+  border-bottom: 4px solid var(--cbmr-yellow);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  flex-wrap: wrap; /* Garante que não quebre em telas muito pequenas */
+  gap: 20px;
+}
+
+.logo-central {
+   margin-left: 20px;
+}
+
+/* --- BARRA DE NAVEGAÇÃO --- */
+.nav-bar {
+  background-color: var(--geobrugg-blue);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+}
+
+.nav-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.nav-btn:hover {
+  background: var(--cbmr-yellow);
+  color: var(--geobrugg-blue);
+  border-color: var(--cbmr-yellow);
+}
+
+/* --- CONTEÚDO DO LOBBY --- */
+.lobby-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px 100px 20px; /* Espaço em baixo */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Controles do Jogo */
+.game-controls {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+  text-align: center;
+  border-left: 5px solid var(--teal-accent);
+}
+
+.game-controls h2 {
+  margin: 0 0 15px 0;
+  color: var(--geobrugg-blue);
+}
+
+.control-btn {
+  background: var(--teal-accent);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.control-btn:hover {
+  background: var(--geobrugg-blue);
+}
+
+/* --- Cards dos Times --- */
+.teams-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.team-card {
+  background: white;
+  flex: 1;
+  min-width: 320px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  border-top: 5px solid var(--geobrugg-blue);
+}
+
+.team-card h2 {
+  color: var(--geobrugg-blue);
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+/* Inputs Bonitos */
+.participant-group {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.input-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.text-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Previne estourar layout */
+}
+
+/* Botão de Upload Customizado */
+.file-input-hidden {
+  display: none;
+}
+
+.image-btn-label {
+  display: inline-block;
+  margin-top: 8px;
+  background-color: #e2e6ea;
+  color: #333;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.image-btn-label:hover {
+  background-color: #dbe2e8;
+}
+
+.status-ok {
+  font-size: 0.8rem;
+  color: green;
+  margin-top: 4px;
+  font-weight: bold;
+}
+
+.status-empty {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+/* Botão Salvar Geral */
+.save-all-btn {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--cbmr-yellow);
+  color: var(--geobrugg-blue);
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.save-all-btn:hover {
+  transform: scale(1.02);
+  background-color: #ffdb73;
+}

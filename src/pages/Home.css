@@ -1,0 +1,150 @@
+/* src/pages/home/home.css */
+body{
+    overflow: hidden;
+    background-color: none;
+    margin: 0;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+  /* CORREÇÃO: Remove barra de rolagem e fixa tamanho */
+  height: 100vh;
+  width: 100%; 
+  overflow: hidden; 
+  position: relative;
+
+  /* CORREÇÃO: Fundo Bege/Areia (Rock style) */
+  background: radial-gradient(circle at center, #FDFBF7 0%, #E8E0D5 100%);
+}
+
+/* Área Principal */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  /* Leve ajuste para subir o logo e não ficar colado no rodapé */
+  padding-bottom: 80px; 
+}
+
+.logo-wrapper {
+  margin-bottom: 1.5rem;
+  animation: float 6s ease-in-out infinite;
+}
+
+.main-logo {
+  max-height: 320px; /* Levemente menor para garantir que cabe em telas menores sem scroll */
+  width: auto;
+ 
+}
+
+.event-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  /* Mudado para um Cinza Escuro de Rocha para contraste com o Bege */
+  color: #3E3C38; 
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+
+.press-start {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: #6B665F; /* Tom terroso */
+  margin-top: 1.5rem;
+  animation: blink 2s infinite;
+}
+
+.key-badge {
+  background-color: var(--cbmr-yellow);
+  color: #333;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+}
+
+/* Rodapé dos Parceiros */
+.partners-footer {
+  position: absolute; /* Fixa no fundo */
+  bottom: 0;
+  width: 100%;
+  height: 100px; /* Altura fixa para evitar pulos */
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.05);
+  border-top: 4px solid var(--cbmr-yellow);
+  z-index: 10;
+}
+
+.partner-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #999;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.partner-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(0%);
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.partners-footer:hover .partner-logo {
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 30px;
+  background-color: #ffffff;
+}
+
+/* Atalhos discretos */
+.shortcuts-overlay {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+  font-size: 0.7rem;
+  color: rgb(0, 0, 0); /* Cor terrosa transparente */
+  font-family: monospace;
+}
+
+/* Animações */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}

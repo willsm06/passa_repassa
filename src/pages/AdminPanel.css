@@ -1,0 +1,301 @@
+/* src/pages/AdminPanel.css */
+
+.admin-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+  color: #333;
+}
+
+h1 {
+  color: #10335e; /* Azul Geobrugg */
+  border-bottom: 3px solid #FFC72C; /* Amarelo CBMR */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-badge {
+  font-size: 0.9rem;
+  background-color: #e0e0e0;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: normal;
+}
+
+/* --- SEÇÕES (CARDS) --- */
+.section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-left: 5px solid #10335e;
+}
+
+.section h3 {
+  margin-top: 0;
+  color: #555;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* --- BOTÕES GERAIS --- */
+button {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: transform 0.1s, opacity 0.2s;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* --- NAVEGAÇÃO --- */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-nav {
+  background-color: #10335e;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+}
+
+.btn-nav:hover {
+  background-color: #164680;
+}
+
+/* --- PLACAR --- */
+.score-board {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.team-score {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1;
+  border: 1px solid #ddd;
+}
+
+.team-score h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+}
+
+.score-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #10335e;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.btn-score {
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  margin: 0 5px;
+  color: white;
+}
+
+.btn-plus { background-color: #28a745; }
+.btn-minus { background-color: #dc3545; }
+
+/* --- ALERTA DE VENCEDOR (BUZZER) --- */
+.winner-alert {
+  background-color: #ff4d4d !important; /* Vermelho urgente */
+  color: white;
+  text-align: center;
+  border-left: none !important;
+  border: 4px solid #b30000;
+}
+
+.winner-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.winner-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-confirm {
+  background-color: #28a745; /* Verde */
+  color: white;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  box-shadow: 0 4px 0 #1e7e34;
+}
+
+.btn-reset {
+  background-color: #333; /* Preto/Cinza */
+  color: white;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  box-shadow: 0 4px 0 #111;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+/* --- PERGUNTAS --- */
+.questions-layout {
+  display: flex;
+  gap: 30px;
+}
+
+.q-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.q-form textarea {
+  padding: 10px;
+  height: 80px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.q-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-save {
+  background-color: #FFC72C;
+  color: #333;
+  padding: 12px;
+}
+
+.q-list {
+  flex: 1;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.q-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  background: white;
+}
+
+.q-item:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.q-text {
+  flex: 1;
+  font-size: 0.9rem;
+  margin-right: 10px;
+}
+
+.btn-project {
+  background-color: #17a2b8;
+  color: white;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+}
+
+/* Mantenha o que você já tinha e adicione/substitua isso: */
+
+.btn-reset-danger {
+    background-color: #dc3545;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #b02a37;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+.btn-reset-danger:hover {
+    background-color: #c82333;
+}
+
+.team-name-display {
+    color: #10335e;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.btn-champion {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    background-color: #FFC72C;
+    color: #10335e;
+    font-weight: 800;
+    padding: 12px;
+    border: 2px solid #e0a800;
+    text-transform: uppercase;
+}
+
+.btn-champion:hover {
+    background-color: #ffca2c;
+    box-shadow: 0 0 10px #FFC72C;
+}
+
+/* ... (outros estilos) ... */
+
+/* Legenda dos Atalhos */
+.shortcuts-legend {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+.key-hint {
+    background: #555;
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 1px solid #777;
+}
+
+/* Ajuste nos botões para mostrar a letra pequena */
+.btn-nav small {
+    display: block;
+    font-size: 0.7em;
+    opacity: 0.7;
+    margin-top: 2px;
+}
